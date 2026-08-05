@@ -1,8 +1,8 @@
 // Front2Back — Interactions
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Nav scroll state
   const nav = document.getElementById('nav');
+
   const onScroll = () => {
     if (window.scrollY > 60) {
       nav.classList.add('scrolled');
@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('scrolled');
     }
   };
+
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Mobile menu
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
   const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Smooth reveal on scroll
   const reveals = document.querySelectorAll(
     '.service-card, .expect-item, .industry-item, .section-header, .why-content, .contact-info, .contact-form, .join-content'
   );
@@ -51,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   reveals.forEach(el => observer.observe(el));
 
-  // Contact form (demo — opens mailto)
   const form = document.getElementById('contactForm');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -70,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.location.href = `mailto:bookings@front2backstaff.com?subject=${subject}&body=${body}`;
 
-    // Optional visual feedback
     const btn = form.querySelector('button[type="submit"]');
     const original = btn.textContent;
     btn.textContent = 'Opening email…';

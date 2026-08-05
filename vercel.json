@@ -1,10 +1,9 @@
 {
-  "version": 3,
-  "name": "front-to-back-staff",
+  "version": 2,
   "builds": [
-    { "src": "index.html", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/$1" }
+    {
+      "src": "**/*",
+      "use": "@vercel/static"
+    }
   ]
 }
