@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const reveals = document.querySelectorAll(
-    '.service-card, .expect-item, .industry-item, .section-header, .why-content, .contact-info, .contact-form, .join-content'
+    '.service-card, .expect-item, .section-header, .why-content, .contact-info, .contact-form, .join-content'
   );
 
   reveals.forEach(el => el.classList.add('reveal'));
